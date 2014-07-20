@@ -51,7 +51,7 @@ ENV HOME /home/app
 # Asset precompile
 RUN bundle exec rake assets:precompile
 # Add the rest
-ADD / /home/app/crb_demo_app
+ADD / /home/app/crb_demo_app/
 # Fix Ownership
 USER root
 ENV HOME /root
