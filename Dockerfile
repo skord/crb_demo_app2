@@ -56,4 +56,5 @@ ADD / /home/app/crb_demo_app
 USER root
 ENV HOME /root
 RUN chown -R app:app /home/app/crb_demo_app
-
+ADD build/envs.conf /etc/nginx/main.d/envs.conf
+RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
