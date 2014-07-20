@@ -80,6 +80,7 @@ test:
 #
 production:
   <<: *default
-  database: <%= ENV['CRB_DEMO_APP_POSTGRESQL_DB'] %>
-  username: <%= ENV['CRB_DEMO_APP_POSTGRESQL_USER'] %>
-  password: <%= ENV['CRB_DEMO_APP_POSTGRESQL_PASSWORD'] %>
+  database: <%= ENV['PG_HOST_POSTGRESQL_DB'] %>
+  username: <%= ENV['PG_HOST_POSTGRESQL_USER'] %>
+  password: <%= ENV['PG_HOST_ENV_POSTGRESQL_PASS'] %>
+  host: <%= ENV['PG_HOST_PORT_5432_TCP_ADDR'] %>

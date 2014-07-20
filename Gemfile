@@ -50,7 +50,6 @@ group :test, :development do
   gem 'rspec-rails'
   gem 'factory_girl_rails'
   gem 'html2slim'
-  gem 'jazz_hands'
 end
 
 group :development do
