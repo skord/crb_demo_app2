@@ -80,6 +80,6 @@ test:
 #
 production:
   <<: *default
-  database: crb_demo_app_production
-  username: crb_demo_app
-  password: <%= ENV['CRB_DEMO_APP_DATABASE_PASSWORD'] %>
+  database: <%= ENV['CRB_DEMO_APP_POSTGRESQL_DB'] %>
+  username: <%= ENV['CRB_DEMO_APP_POSTGRESQL_USER'] %>
+  password: <%= ENV['CRB_DEMO_APP_POSTGRESQL_PASSWORD'] %>

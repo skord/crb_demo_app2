@@ -39,8 +39,6 @@ gem 'spring',        group: :development
 # gem 'debugger', group: [:development, :test]
 
 gem 'slim-rails'
-gem 'sidekiq'
-gem 'sinatra', '>= 1.3.0', :require => nil
 
 gem 'simple_form'
 
