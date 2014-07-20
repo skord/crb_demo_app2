@@ -23,7 +23,11 @@ default: &default
 
 development:
   <<: *default
-  database: crb_demo_app_development
+  database: <%= ENV['PG_HOST_ENV_POSTGRESQL_DB'] %>
+  username: <%= ENV['PG_HOST_ENV_POSTGRESQL_USER'] %>
+  password: <%= ENV['PG_HOST_ENV_POSTGRESQL_PASS'] %>
+  host: <%= ENV['PG_HOST_PORT_5432_TCP_ADDR'] %>
+  port: <%= ENV['PG_HOST_PORT_5432_TCP_PORT'] %>
 
 test:
   <<: *default
