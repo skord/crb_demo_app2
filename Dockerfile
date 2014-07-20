@@ -4,6 +4,8 @@ MAINTAINER Mike Danko <danko@mittdarko.com>
 # This should not be, but is currently missing from upstream
 ADD /build/ruby-switch /build/ruby-switch
 RUN chmod 0755 /build/ruby-switch
+# Update apt-cache
+RUN apt-get update -qq
 # Build System and git
 RUN /build/utilities.sh
 # Ruby
@@ -17,7 +19,9 @@ ENV HOME /root
 # The default command to be executed in container
 CMD ["/sbin/my_init"]
 # Let's get some NGINX things out of the way
-
+ADD build/crb_demo_app.conf /etc/nginx/sites-enabled/crb_demo_app.conf
+RUN rm -f /etc/nginx/sites-enabled/default
+RUN rm -f /etc/service/nginx/down
 # Let's start copying our app over to the image
 RUN mkdir -p /home/app/crb_demo_app
 WORKDIR /home/app/crb_demo_app
@@ -52,5 +56,4 @@ ADD / /home/app/crb_demo_app
 USER root
 ENV HOME /root
 RUN chown -R app:app /home/app/crb_demo_app
-
 
