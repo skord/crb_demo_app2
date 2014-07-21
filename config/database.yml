@@ -20,9 +20,9 @@ default: &default
   # For details on connection pooling, see rails configuration guide
   # http://guides.rubyonrails.org/configuring.html#database-pooling
   pool: 5
-  database: <%= ENV['PG_HOST_ENV_DB'] %>
-  username: <%= ENV['PG_HOST_ENV_USER'] %>
-  password: <%= ENV['PG_HOST_ENV_PASS'] %>
+  database: <%= ENV['PG_HOST_ENV_POSTGRESQL_DB'] %>
+  username: <%= ENV['PG_HOST_ENV_POSTGRESQL_USER'] %>
+  password: <%= ENV['PG_HOST_ENV_POSTGRESQL_PASS'] %>
   host: <%= ENV['PG_HOST_PORT_5432_TCP_ADDR'] %>
   port: <%= ENV['PG_HOST_PORT_5432_TCP_PORT'] %>
     
