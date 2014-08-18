@@ -5,6 +5,7 @@ MAINTAINER Mike Danko <danko@mittdarko.com>
 USER root
 ENV HOME /root
 RUN apt-get update -qq
+RUN /build/devheaders.sh
 # The default command to be executed in container
 CMD ["/sbin/my_init"]
 ADD / /home/app/crb_demo_app/
