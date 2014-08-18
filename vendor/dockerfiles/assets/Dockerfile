@@ -13,8 +13,6 @@ ENV HOME /root
 RUN chown -R app:app /home/app/crb_demo_app/public/assets/
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 VOLUME ["/home/app/crb_demo_app/public/assets/"]
-USER app
-ENV HOME /home/app
 WORKDIR /home/app/crb_demo_app
 
 
