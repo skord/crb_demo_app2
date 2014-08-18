@@ -4,6 +4,7 @@ MAINTAINER Mike Danko <danko@mittdarko.com>
 # Build System and git
 USER root
 ENV HOME /root
+RUN apt-get update -qq
 # The default command to be executed in container
 CMD ["/sbin/my_init"]
 ADD / /home/app/crb_demo_app/
